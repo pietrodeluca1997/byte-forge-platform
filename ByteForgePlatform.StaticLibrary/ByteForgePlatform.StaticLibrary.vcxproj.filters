@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="include\ByteForgePlatform\PlatformInputCallbackFunctionSignature.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ByteForgePlatform\PlatformOpenGLContext.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ByteForgePlatform\PlatformOpenGLData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ByteForgePlatform\PlatformSettingsData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ByteForgePlatform\PlatformWindowData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ByteForgePlatform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\PlatformOpenGLContext.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlatformOpenGLData.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlatformOpenGLLoader.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlatformSettingsData.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlatformWindowData.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{bc7359ad-8bc1-4a1e-af83-bcfe702a8ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{684b7bbf-8f14-48da-bfd3-3d3cea090737}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ByteForgePlatform.StaticLibrary", "ByteForgePlatform.StaticLibrary\ByteForgePlatform.StaticLibrary.vcxproj", "{40207721-5A0C-4D8B-92D2-77B7E575E77D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ByteForgePlatform.Tests", "ByteForgePlatform.Tests\ByteForgePlatform.Tests.vcxproj", "{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40207721-5A0C-4D8B-92D2-77B7E575E77D}.Debug|x64.ActiveCfg = Debug|x64
+		{40207721-5A0C-4D8B-92D2-77B7E575E77D}.Debug|x64.Build.0 = Debug|x64
+		{40207721-5A0C-4D8B-92D2-77B7E575E77D}.Release|x64.ActiveCfg = Release|x64
+		{40207721-5A0C-4D8B-92D2-77B7E575E77D}.Release|x64.Build.0 = Release|x64
+		{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}.Debug|x64.ActiveCfg = Debug|x64
+		{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}.Debug|x64.Build.0 = Debug|x64
+		{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}.Release|x64.ActiveCfg = Release|x64
+		{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
