@@ -1,3 +1,3 @@
 #pragma once
 
-#include "ByteForgePlatform/PlatformOpenGLContext.h"
+#include "ByteForgePlatform/OpenGL/PlatformOpenGLContext.h"

@@ -1,10 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="include\PlatformTestFixture.h" />
+    <ClCompile Include="source\PlatformTests.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlatformTestFixture.c">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\PlatformTestFixture.c" />
-    <ClCompile Include="source\PlatformTests.c" />
+    <Filter Include="include">
+      <UniqueIdentifier>{7b47839f-4b1f-486c-b692-9095eaa31f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{20a24eb0-33d5-4105-942a-0217a8eee8a3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\PlatformTestFixture.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

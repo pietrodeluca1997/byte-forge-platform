@@ -1,4 +1,4 @@
-#include "ByteForgePlatform/PlatformOpenGLContext.h"
+#include "ByteForgePlatform/OpenGL/PlatformOpenGLContext.h"
 
 #include <ByteForgeLogging.h>
 
@@ -134,7 +134,7 @@ void PlatformOpenGLContext_SwapBuffers(const PlatformOpenGLData* const platform_
     SDL_GL_SwapWindow(platform_data->sdl_window);
 }
 
-void PlatformOpenGLContext_SetBackgroundColor(const PlatformOpenGLData* const platform_data, const int r, const int g, const int b, const int a)
+void PlatformOpenGLContext_SetBackgroundColor(const PlatformOpenGLData* const platform_data, const float r, const float g, const float b, const float a)
 {
     if (!platform_data || !platform_data->sdl_renderer)
     {
@@ -142,8 +142,9 @@ void PlatformOpenGLContext_SetBackgroundColor(const PlatformOpenGLData* const pl
         return;
     }
 
+    glViewport(0, 0, platform_data->window_data->window_width, platform_data->window_data->window_height);
     glClearColor(r, g, b, a);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void PlatformOpenGLContext_Free(PlatformOpenGLData* platform_data)

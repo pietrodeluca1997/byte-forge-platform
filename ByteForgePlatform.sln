@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ByteForgePlatform.StaticLibrary", "ByteForgePlatform.StaticLibrary\ByteForgePlatform.StaticLibrary.vcxproj", "{40207721-5A0C-4D8B-92D2-77B7E575E77D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ByteForgePlatform.Tests", "ByteForgePlatform.Tests\ByteForgePlatform.Tests.vcxproj", "{A41DA954-0552-4C22-BA8B-E98CDDBDA5F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40207721-5A0C-4D8B-92D2-77B7E575E77D} = {40207721-5A0C-4D8B-92D2-77B7E575E77D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

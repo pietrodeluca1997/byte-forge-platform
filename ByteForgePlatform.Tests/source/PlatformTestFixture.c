@@ -16,4 +16,7 @@ void PlatformTestFixture_New(PlatformTestFixture** fixture)
 
 void PlatformTestFixture_Free(PlatformTestFixture** fixture)
 {
+	PlatformOpenGLContext_Free((*fixture)->platform_data);
+	PlatformOpenGLData_Free(&(*fixture)->platform_data);
+	free(*fixture);
 }

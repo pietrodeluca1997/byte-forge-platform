@@ -1,7 +1,7 @@
 #pragma once
 
-#include "PlatformSettingsData.h"
-#include "PlatformWindowData.h"
+#include "ByteForgePlatform/PlatformSettingsData.h"
+#include "ByteForgePlatform/PlatformWindowData.h"
 
 #include <SDL3/SDL.h>
 

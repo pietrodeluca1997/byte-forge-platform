@@ -1,4 +1,4 @@
-#include "ByteForgePlatform/PlatformOpenGLData.h"
+#include "ByteForgePlatform/OpenGL/PlatformOpenGLData.h"
 
 #include <stdlib.h>
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PlatformInputCallbackFunctionSignature.h"
+#include "ByteForgePlatform/PlatformInputCallbackFunctionSignature.h"
 #include "PlatformOpenGLData.h"
 
 #include <stdbool.h>
@@ -33,12 +33,12 @@ void PlatformOpenGLContext_SwapBuffers(const PlatformOpenGLData* const platform_
  * @brief Sets the background color for the rendering context with OpenGL.
  *
  * @param platform_data: Pointer to the PlatformData instance containing the rendering context. Must not be NULL.
- * @param r: Red component of the color (0-255).
- * @param g: Green component of the color (0-255).
- * @param b: Blue component of the color (0-255).
- * @param a: Alpha component of the color (0-255).
+ * @param r: Red component of the color (0-1).
+ * @param g: Green component of the color (0-1).
+ * @param b: Blue component of the color (0-1).
+ * @param a: Alpha component of the color (0-1).
  */
-void PlatformOpenGLContext_SetBackgroundColor(const PlatformOpenGLData* const platform_data, const int r, const int g, const int b, const int a);
+void PlatformOpenGLContext_SetBackgroundColor(const PlatformOpenGLData* const platform_data, const float r, const float g, const float b, const float a);
 
 /**
  * @brief Frees the resources associated with the platform context.
