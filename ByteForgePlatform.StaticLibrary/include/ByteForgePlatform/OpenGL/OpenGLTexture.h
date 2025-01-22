@@ -11,3 +11,4 @@ typedef struct OpenGLTexture
 } OpenGLTexture;
 
 OpenGLTexture OpenGLTexture_New(const int texture_width, const int texture_height, const void* pixels);
+void OpenGLTexture_Free(OpenGLTexture* texture);

@@ -55,7 +55,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\ByteForgeMemory.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,7 +73,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\ByteForgeMemory.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

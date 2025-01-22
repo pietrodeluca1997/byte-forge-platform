@@ -19,3 +19,4 @@ typedef struct OpenGLShader
 } OpenGLShader;
 
 OpenGLShader OpenGLShader_New(const char* vertex_shader_code, const char* fragment_shader_code);
+void OpenGLShader_Free(OpenGLShader* shader);

@@ -63,3 +63,27 @@ OpenGLShader OpenGLShader_New(const char* vertex_shader_code, const char* fragme
 
 	return shader;
 }
+
+void OpenGLShader_Free(OpenGLShader* shader)
+{
+    if (shader)
+    {
+        if (shader->opengl_shader_program_id)
+        {
+            glDeleteProgram(shader->opengl_shader_program_id);
+            shader->opengl_shader_program_id = 0;
+        }
+
+        if (shader->opengl_vertex_shader_id)
+        {
+            glDeleteShader(shader->opengl_vertex_shader_id);
+            shader->opengl_vertex_shader_id = 0;
+        }
+
+        if (shader->opengl_fragment_shader_id)
+        {
+            glDeleteShader(shader->opengl_fragment_shader_id);
+            shader->opengl_fragment_shader_id = 0;
+        }
+    }
+}

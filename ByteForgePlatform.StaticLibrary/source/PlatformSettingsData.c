@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include <ByteForgeLogging.h>
+#include <ByteForgeMemory.h>
 
 static const uint8_t MINIMUM_TARGET_FPS_REQUIRED = 30;
 
@@ -16,7 +17,7 @@ bool PlatformSettingsData_Create(const uint8_t target_fps, PlatformSettingsData*
 		return false;
 	}
 
-	PlatformSettingsData* platform_settings = calloc(1, sizeof(PlatformSettingsData));
+	PlatformSettingsData* platform_settings = ALLOC(PlatformSettingsData, MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
 	if (!platform_settings)
 	{
@@ -45,7 +46,7 @@ void PlatformSettingsData_Free(PlatformSettingsData** platform_settings_data)
 		return;
 	}
 
-	free(*platform_settings_data);
+	FREE(platform_settings_data, sizeof(PlatformSettingsData), MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
 	LOG_SUCCESS("\t - Platform settings data structure freed successfully.");
 	LOG_NEW_LINE();

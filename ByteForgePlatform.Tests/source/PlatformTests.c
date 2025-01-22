@@ -1,9 +1,12 @@
 #include "PlatformTestFixture.h"
 
 #include <ByteForgeMath/Matrix4.h>
+
 #include <ByteForgePlatform/OpenGL/OpenGLVertexArray.h>
 #include <ByteForgePlatform/OpenGL/OpenGLShader.h>
 #include <ByteForgePlatform/OpenGL/OpenGLTexture.h>
+
+#include <ByteForgeMemory/Reports/MemoryUsageReport.h>
 
 #include <glad/glad.h>
 #include <SDL3_image/SDL_image.h>
@@ -31,6 +34,8 @@ const static char* fragment_shader = "#version 460 core\n"
  
 int main()
 {
+	MemoryUsageReport_Init();
+
 	PlatformTestFixture* fixture = { 0 };
 	PlatformTestFixture_New(&fixture);
 
@@ -59,6 +64,8 @@ int main()
 
 	glUniformMatrix4fv(model_matrix_location, 1, GL_FALSE, &background_model.data[0]);
 
+	MemoryUsageReport_PrintInfo();
+
 	while (PlatformOpenGLContext_PollThreadEvents(NULL, NULL))
 	{
 		PlatformOpenGLContext_SetBackgroundColor(fixture->platform_data, 0.2f, 0.2f, 0.2f, 1.0f);
@@ -72,8 +79,15 @@ int main()
 
 		PlatformOpenGLContext_SwapBuffers(fixture->platform_data);
 	}
-		
+	
+	OpenGLTexture_Free(&texture);
+	OpenGLShader_Free(&shader);
+	OpenGLVertexArray_Free(&vao);
+
 	PlatformTestFixture_Free(&fixture);
+
+	MemoryUsageReport_PrintInfo();
+	MemoryUsageReport_Exit();
 
 	return 0;
 }

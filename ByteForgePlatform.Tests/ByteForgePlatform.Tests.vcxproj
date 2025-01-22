@@ -43,19 +43,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMath\ByteForgeMath.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.Tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\ByteForgeMemory.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMath\ByteForgeMath.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.Tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\lib;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\libs;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\x64\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ByteForgePlatform.StaticLibrary.lib;ByteForgeLogging.StaticLibrary.lib;SDL3.lib;SDL3_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\lib;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\libs;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ByteForgeMemory.StaticLibrary.lib;;ByteForgePlatform.StaticLibrary.lib;ByteForgeLogging.StaticLibrary.lib;SDL3.lib;SDL3_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -66,15 +72,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMath\ByteForgeMath.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.Tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\ByteForgeMemory.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMath\ByteForgeMath.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.Tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\lib;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\libs;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\x64\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ByteForgePlatform.StaticLibrary.lib;ByteForgeLogging.StaticLibrary.lib;SDL3.lib;SDL3_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeMemory\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\lib;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\libs;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\x64\Debug;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ByteForgeMemory.StaticLibrary.lib;;ByteForgePlatform.StaticLibrary.lib;ByteForgeLogging.StaticLibrary.lib;SDL3.lib;SDL3_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

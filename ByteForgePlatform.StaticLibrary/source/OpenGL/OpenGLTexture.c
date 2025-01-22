@@ -21,3 +21,12 @@ OpenGLTexture OpenGLTexture_New(const int texture_width, const int texture_heigh
 
 	return texture;
 }
+
+void OpenGLTexture_Free(OpenGLTexture* texture)
+{
+	if (texture && texture->opengl_texture_id)
+	{
+		glDeleteTextures(1, &texture->opengl_texture_id);
+		texture->opengl_texture_id = 0;
+	}
+}

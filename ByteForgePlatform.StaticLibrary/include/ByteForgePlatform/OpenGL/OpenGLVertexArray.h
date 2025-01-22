@@ -12,3 +12,4 @@ typedef struct OpenGLVertexArray
 } OpenGLVertexArray;
 
 OpenGLVertexArray OpenGLVertexArray_New();
+void OpenGLVertexArray_Free(OpenGLVertexArray* vertex_array);

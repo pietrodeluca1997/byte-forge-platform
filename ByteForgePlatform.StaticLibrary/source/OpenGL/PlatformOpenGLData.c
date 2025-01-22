@@ -3,12 +3,13 @@
 #include <stdlib.h>
 
 #include <ByteForgeLogging.h>
+#include <ByteForgeMemory.h>
 
 bool PlatformOpenGLData_Create(PlatformOpenGLData** platform_data)
 {
     LOG_INFO("Creating platform data:");
 
-    PlatformOpenGLData* new_platform_data = calloc(1, sizeof(PlatformOpenGLData));
+    PlatformOpenGLData* new_platform_data = ALLOC(PlatformOpenGLData, MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
     if (!platform_data)
     {
@@ -35,7 +36,7 @@ void PlatformOpenGLData_Free(PlatformOpenGLData** platform_data)
         return;
     }
 
-    free(*platform_data);
+    FREE(platform_data, sizeof(PlatformOpenGLData), MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
     LOG_SUCCESS("\t - Platform OpenGL data structure freed successfully.");
 }

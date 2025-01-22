@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #include <ByteForgeLogging.h>
+#include <ByteForgeMemory.h>
 
 bool PlatformWindowData_Create(const char* window_title, const int window_width, const int window_height, const int viewport_width, const int viewport_height, PlatformWindowData** platform_window_data)
 {
@@ -28,7 +29,7 @@ bool PlatformWindowData_Create(const char* window_title, const int window_width,
         return false;
     }
 
-    PlatformWindowData* platform_window = calloc(1, sizeof(PlatformWindowData));
+    PlatformWindowData* platform_window = ALLOC(PlatformWindowData, MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
     if (!platform_window)
     {
@@ -38,7 +39,7 @@ bool PlatformWindowData_Create(const char* window_title, const int window_width,
 
     size_t window_title_size = strlen(window_title) + 1;
 
-    platform_window->window_title = calloc(window_title_size, sizeof(char));
+    platform_window->window_title = ALLOC_SIZE(window_title_size, MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
     if (!platform_window->window_title)
     {
@@ -72,8 +73,8 @@ void PlatformWindowData_Free(PlatformWindowData** platform_window_data)
         return;
     }
 
-    free((*platform_window_data)->window_title);
-    free(*platform_window_data);
+    FREE(&(*platform_window_data)->window_title, sizeof(char) * (strlen((*platform_window_data)->window_title) + 1), MEMORY_ALLOCATION_CATEGORY_PLATFORM);
+    FREE(platform_window_data, sizeof(PlatformWindowData), MEMORY_ALLOCATION_CATEGORY_PLATFORM);
 
     LOG_SUCCESS("\t - Platform window data structure freed successfully.");
 }

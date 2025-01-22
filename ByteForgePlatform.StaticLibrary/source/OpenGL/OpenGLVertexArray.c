@@ -46,3 +46,27 @@ OpenGLVertexArray OpenGLVertexArray_New()
 
 	return vertex_array;
 }
+
+void OpenGLVertexArray_Free(OpenGLVertexArray* vertex_array)
+{
+	if (vertex_array)
+	{
+		if (vertex_array->vertex_array_opengl_id)
+		{
+			glDeleteVertexArrays(1, &vertex_array->vertex_array_opengl_id);
+			vertex_array->vertex_array_opengl_id = 0;
+		}
+				
+		if (vertex_array->vertex_buffer_opengl_id)
+		{
+			glDeleteBuffers(1, &vertex_array->vertex_buffer_opengl_id);
+			vertex_array->vertex_buffer_opengl_id = 0;
+		}
+
+		if (vertex_array->index_buffer_opengl_id)
+		{
+			glDeleteBuffers(1, &vertex_array->index_buffer_opengl_id);
+			vertex_array->index_buffer_opengl_id = 0;
+		}
+	}
+}
