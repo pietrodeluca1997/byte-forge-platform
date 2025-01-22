@@ -10,6 +10,8 @@ typedef struct PlatformWindowData
     char* window_title;
     int window_width;
     int window_height;
+    int viewport_width;
+    int viewport_height;
 } PlatformWindowData;
 
 /**
@@ -17,12 +19,14 @@ typedef struct PlatformWindowData
  *
  * @param window_title:                The title of the window. Must not be NULL.
  * @param window_width:                The desired width of the window in pixels. Must be greater than zero.
- * @param window_height:               The desired height of the window in pixels. Must be greater than zero.
+ * @param window_width:                The desired width of the window in pixels. Must be greater than zero.
+ * @param viewport_width:              The desired width of the viewport in pixels. Must be greater than zero.
+ * @param viewport_height:             The desired height of the viewport in pixels. Must be greater than zero.
  * @param platform_window_data:        Pointer to the output PlatformWindowData instance. Must not be NULL.
  *
  * @return True if the structure was successfully created; false otherwise.
  */
-bool PlatformWindowData_Create(const char* window_title, const int window_width, const int window_height, PlatformWindowData** platform_window_data);
+bool PlatformWindowData_Create(const char* window_title, const int window_width, const int window_height, const int viewport_width, const int viewport_height, PlatformWindowData** platform_window_data);
 
 /**
  * @brief Frees the memory associated with a PlatformWindowData instance.

@@ -4,12 +4,6 @@
     <ClInclude Include="include\ByteForgePlatform\PlatformInputCallbackFunctionSignature.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\ByteForgePlatform\PlatformOpenGLContext.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ByteForgePlatform\PlatformOpenGLData.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="include\ByteForgePlatform\PlatformSettingsData.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -17,23 +11,25 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\ByteForgePlatform.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\PlatformOpenGLContext.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\PlatformOpenGLData.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLTexture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\PlatformOpenGLContext.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\PlatformOpenGLData.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\PlatformOpenGLLoader.c">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="source\PlatformSettingsData.c">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="source\PlatformWindowData.c">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\OpenGL\OpenGLShader.c" />
+    <ClCompile Include="source\OpenGL\OpenGLVertexArray.c" />
+    <ClCompile Include="source\OpenGL\PlatformOpenGLContext.c" />
+    <ClCompile Include="source\OpenGL\PlatformOpenGLData.c" />
+    <ClCompile Include="source\OpenGL\PlatformOpenGLLoader.c" />
+    <ClCompile Include="source\OpenGL\OpenGLTexture.c" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">

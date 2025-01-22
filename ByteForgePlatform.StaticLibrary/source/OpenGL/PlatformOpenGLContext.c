@@ -79,9 +79,11 @@ bool PlatformOpenGLContext_Initialize(PlatformOpenGLData* platform_data)
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    glViewport(0, 0, platform_data->window_data->viewport_width, platform_data->window_data->viewport_height);
+
     platform_data->opengl_context = opengl_context;
     platform_data->sdl_window = window;
-    platform_data->sdl_renderer = renderer;
+    platform_data->sdl_renderer = renderer;    
 
     LOG_SUCCESS("\t - Platform context with OpenGL initialized successfully.");
     LOG_NEW_LINE();

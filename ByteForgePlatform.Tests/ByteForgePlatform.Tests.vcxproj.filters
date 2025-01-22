@@ -21,4 +21,9 @@
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\background_layer_1.png" />
+    <Image Include="assets\background_layer_2.png" />
+    <Image Include="assets\background_layer_3.png" />
+  </ItemGroup>
 </Project>

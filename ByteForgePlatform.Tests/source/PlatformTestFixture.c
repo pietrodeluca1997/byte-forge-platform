@@ -8,7 +8,7 @@ void PlatformTestFixture_New(PlatformTestFixture** fixture)
 
 	assert(PlatformOpenGLData_Create(&new_fixture->platform_data));
 
-	assert(PlatformWindowData_Create("Window Title", 1024, 768, &new_fixture->platform_data->window_data));
+	assert(PlatformWindowData_Create("Window Title", 1920, 1080, 320, 180, &new_fixture->platform_data->window_data));
 	assert(PlatformSettingsData_Create(165, &new_fixture->platform_data->settings_data));
 
 	*fixture = new_fixture;

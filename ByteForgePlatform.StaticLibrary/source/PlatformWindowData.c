@@ -5,7 +5,7 @@
 
 #include <ByteForgeLogging.h>
 
-bool PlatformWindowData_Create(const char* window_title, const int window_width, const int window_height, PlatformWindowData** platform_window_data)
+bool PlatformWindowData_Create(const char* window_title, const int window_width, const int window_height, const int viewport_width, const int viewport_height, PlatformWindowData** platform_window_data)
 {
     LOG_INFO("Creating platform window data:");
 
@@ -18,6 +18,13 @@ bool PlatformWindowData_Create(const char* window_title, const int window_width,
     if (window_width <= 0 || window_height <= 0)
     {
         LOG_FATAL("\t - Error: Window dimensions must be greater than zero. Provided: width=%d, height=%d.", window_width, window_height);
+        return false;
+    }
+
+
+    if (viewport_width <= 0 || viewport_height <= 0)
+    {
+        LOG_FATAL("\t - Error: Viewport dimensions must be greater than zero. Provided: width=%d, height=%d.", viewport_width, viewport_height);
         return false;
     }
 
@@ -44,6 +51,8 @@ bool PlatformWindowData_Create(const char* window_title, const int window_width,
     strcpy_s(platform_window->window_title, window_title_size, window_title);
     platform_window->window_width = (int)window_width;
     platform_window->window_height = (int)window_height;
+    platform_window->viewport_width = viewport_width;
+    platform_window->viewport_height = viewport_height;
 
     *platform_window_data = platform_window;
 

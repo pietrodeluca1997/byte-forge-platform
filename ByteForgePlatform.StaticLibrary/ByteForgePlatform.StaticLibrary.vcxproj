@@ -55,7 +55,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,7 +73,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3_image\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\glad\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgeLogging\ByteForgeLogging.StaticLibrary\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\Libraries\SDL3\include;C:\Users\pietr\OneDrive\Área de Trabalho\ByteForge\ByteForgePlatform\ByteForgePlatform.StaticLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClInclude Include="include\ByteForgePlatform.h" />
     <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLTexture.h" />
     <ClInclude Include="include\ByteForgePlatform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="include\ByteForgePlatform\PlatformInputCallbackFunctionSignature.h" />
     <ClInclude Include="include\ByteForgePlatform\OpenGL\PlatformOpenGLContext.h" />
@@ -97,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\OpenGL\OpenGLShader.c" />
+    <ClCompile Include="source\OpenGL\OpenGLTexture.c" />
     <ClCompile Include="source\OpenGL\OpenGLVertexArray.c" />
     <ClCompile Include="source\OpenGL\PlatformOpenGLContext.c" />
     <ClCompile Include="source\OpenGL\PlatformOpenGLData.c" />
